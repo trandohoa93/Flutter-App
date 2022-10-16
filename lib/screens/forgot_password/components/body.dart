@@ -66,7 +66,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
                 setState(() {
                   errors.remove(kEmailNullError);
                 });
-              } else if (emailValidatorRegExp.hasMatch(value!) &&
+              } else if (emailValidatorRegExp.hasMatch(value) &&
                   errors.contains(kInvalidEmailError)) {
                 setState(() {
                   errors.remove(kInvalidEmailError);
