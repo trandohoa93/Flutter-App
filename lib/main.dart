@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_application_1/constatns.dart';
 import 'package:flutter_application_1/routs.dart';
-import 'package:flutter_application_1/screens/splash_screen.dart';
+import 'package:flutter_application_1/screens/splash/splash_screen.dart';
+import 'package:flutter_application_1/theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,15 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: "Multi",
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: kTextColor),
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme(),
       // home: SplashScreen(),
       initialRoute: SplashScreen.routeName,
       routes: routes,

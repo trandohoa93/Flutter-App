@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constatns.dart';
+import 'package:flutter_application_1/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter_application_1/size_config.dart';
 
-import '../../components/default_button.dart';
 import '../components/splash_content.dart';
+import '../../../components/default_button.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -67,7 +68,11 @@ class _BodyState extends State<Body> {
                       flex: 3,
                     ),
                     DefaultButton(
-                      text: "Coutinue",
+                      text: "Continue",
+                      press: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                        print('something');
+                      },
                     ),
                     Spacer(),
                   ],
