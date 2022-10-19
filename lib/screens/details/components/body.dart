@@ -21,39 +21,55 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           ProductImages(product: product),
-          TopRoundedContainer(
-            color: Colors.white,
-            child: Column(
-              children: [
-                ProductDescription(
-                  product: product,
-                  pressOnSeeMore: () {},
-                ),
-                // TopRoundedContainer(
-                //   color: Color(0xFFF6F7F9),
-                //   child: Column(
-                //     children: [
-                //       ColorDots(product: product),
-                TopRoundedContainer(
-                  color: Colors.white,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: SizeConfig.screenWidth * 0.15,
-                        right: SizeConfig.screenWidth * 0.15,
-                        top: getProportionateScreenWidth(15),
-                        bottom: getProportionateScreenWidth(150)),
-                    child: DefaultButton(
-                      text: "Add to Cart",
-                      press: () {},
-                    ),
-                  ),
-                ),
-                //     ],
-                //   ),
-                // ),
-              ],
+          ProductDescription(
+            product: product,
+            pressOnSeeMore: () {},
+          ),
+          ColorDots(product: product),
+          Padding(
+            padding: EdgeInsets.only(
+                left: SizeConfig.screenWidth * 0.15,
+                right: SizeConfig.screenWidth * 0.15,
+                top: getProportionateScreenWidth(15),
+                bottom: getProportionateScreenWidth(150)),
+            child: DefaultButton(
+              text: "Add to Cart",
+              press: () {},
             ),
-          )
+          ),
+          // TopRoundedContainer(
+          //   color: Colors.white,
+          //   child: Column(
+          //     children: [
+          //       ProductDescription(
+          //         product: product,
+          //         pressOnSeeMore: () {},
+          //       ),
+          //       TopRoundedContainer(
+          //         color: Color(0xFFF6F7F9),
+          //         child: Column(
+          //           children: [
+          //             ColorDots(product: product),
+          //             TopRoundedContainer(
+          //               color: Colors.white,
+          //               child: Padding(
+          //                 padding: EdgeInsets.only(
+          //                     left: SizeConfig.screenWidth * 0.15,
+          //                     right: SizeConfig.screenWidth * 0.15,
+          //                     top: getProportionateScreenWidth(15),
+          //                     bottom: getProportionateScreenWidth(150)),
+          //                 child: DefaultButton(
+          //                   text: "Add to Cart",
+          //                   press: () {},
+          //                 ),
+          //               ),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // )
         ],
       ),
     );

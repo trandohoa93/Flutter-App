@@ -35,11 +35,13 @@ class _BodyState extends State<Body> {
                     SvgPicture.asset("assets/icons/Trash.svg")
                   ],
                 )),
+            // myla note xóa start
             onDismissed: (direction) {
               setState(() {
                 demoCarts.removeAt(index);
               });
             },
+            // myla note xóa end
             child: CardItemCard(cart: demoCarts[index]),
           ),
         ),
